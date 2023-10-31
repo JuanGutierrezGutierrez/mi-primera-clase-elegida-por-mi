@@ -39,22 +39,11 @@ public class PlatoDeComida{
     }
     
     public void imprimirEstadoPlato(){
-        String preparacionEnEspanol = "no";
-        if(preparacionFacil == true){
-            preparacionEnEspanol = "si";
-        }
-        System.out.println("Nombre del Plato: " + nombrePlato +" | Número de ingredientes: " + numeroDeIngredientes + " | Facil preparacion: " + preparacionEnEspanol);
+        System.out.println(getEstadoPlato());
     }
     
     public String getEstadoPlato(){
-        String estadoPlato = "";
-        String preparacionEnEspanol = "no";
-        if(preparacionFacil == true){
-            preparacionEnEspanol = "si";
-        }    
-        
-        estadoPlato += ("Nombre del Plato: " + nombrePlato +" | Número de ingredientes: " + numeroDeIngredientes + " | Facil preparacion: " + preparacionEnEspanol); 
-        return estadoPlato;
+        return "Nombre del Plato: " + nombrePlato +" | Número de ingredientes: " + numeroDeIngredientes + " | Facil preparacion: " + (preparacionFacil? "sí" : "no");
     }
 }
     
